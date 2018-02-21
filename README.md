@@ -1,4 +1,4 @@
-#Front-End Interview Questions with a focus on React library
+# Front-End Interview Questions with a focus on React library
 
 What is React? 
 
@@ -38,3 +38,7 @@ it.
 
 The best example that comes to mind where I have used controlled components is a
 Material-UI Text-Field or any other input field.
+
+What is Redux?
+
+Redux is a JavaScript library used to predictably manage an application’s state. It is primarily used with React to build User Interfaces. 
