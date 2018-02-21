@@ -32,13 +32,34 @@ the child. The child will then run something like this: onChange={props.handleCh
 Then the handleChange in the parent will update state in the parent and pass the value
 down to the child.
 
-An uncontrolled component is one that stores its own state internally. You don’t have
+An uncontrolled component is one that stores its own state internally. Data is handled by the DOM, not by React. You don’t have
 access to its value and you will likely have to use ref to query the DOM if you want to get
 it.
 
 The best example that comes to mind where I have used controlled components is a
 Material-UI Text-Field or any other input field.
 
+Typically should use controlled components as they support instant field validation, allow you to disable / enable buttons and enforce input formats
+
 ### What is Redux?
 
-Redux is a JavaScript library used to predictably manage an application’s state. It is primarily used with React to build User Interfaces. 
+Redux is a JavaScript library used to predictably manage an application’s state. 
+
+### Talk to me about Error Boundaries
+
+### What is Reselect?
+
+### In which lifecycle event do you make AJAX requests and why?
+
+componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
+
+### What does shouldComponentUpdate do and why is it important?
+
+### Other good information to know
+
+
+
+React Fiber is the next implementation of React's reconciliation algorithm. 
+
+
+
