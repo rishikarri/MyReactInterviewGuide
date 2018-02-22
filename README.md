@@ -1,4 +1,4 @@
-# Front-End Interview Questions with a focus on React library
+# Software Dev Interview Questions with a focus on React
 
 ### What is React? 
 
@@ -54,6 +54,20 @@ Redux is a JavaScript library used to predictably manage an application’s stat
 componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
 
 ### What does shouldComponentUpdate do and why is it important?
+
+### When would you use a class component over a functional component? 
+
+If your component has state or a lifecycle method, use a class component. Otherwise, use a functional component. 
+
+### What are refs in react? 
+
+Refs are an escape hatch which allow you to get direct access to a DOM element. In order to use them you attach a ref attribute to your 
+component whose value is a callback function which recieves the underlying DOM element as its first argument. 
+
+### What is a callback? 
+
+A callback function, also known as a Higher Order Function, is a function passed to another function as a parameter. By doing this you can 
+execute the function passed as the parameter (the callback function) at a later time.
 
 ### Other good information to know
 
