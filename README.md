@@ -2,16 +2,12 @@
 
 ### What is React? 
 
-It is a JavaScript library for building User Interfaces. 
+It is a JavaScript library for building User Interfaces. It follows the component based approach which helps in building reusable UI components. It was built by Facebook. 
 
 ### What is a React Element? 
 
 A React Element describes what you want to see on the screen. It isn't the ACUAL THING you see on the screen, but rather 
 is an object representation of a DOM node. 
-
-What is a DOM node? 
-
-What is the DOM? 
 
 
 ### What Happens when you call setState? 
@@ -22,8 +18,7 @@ diff this new tree against the previous element tree. By doing this, React will 
 
 
 
-### What is the difference between a controlled component and an uncontrolled
-component?
+### What is the difference between a controlled component and an uncontrolled component?
 
 A controlled component is one that takes its current value through props and notifies
 changes through callbacks like “onChange”. Usually the parent component will have a
@@ -48,6 +43,20 @@ Redux is a JavaScript library used to predictably manage an application’s stat
 ### Talk to me about Error Boundaries
 
 ### What is Reselect?
+
+### What is a Closure in JavaScript?
+
+An function with preserved data. An inner function with access to a variable or parameter outside of its scope.
+
+Example from StackOverflow: 
+
+function sayAlice() {
+    var say = function() { console.log(alice); }
+    // Local variable that ends up within closure
+    var alice = 'Hello Alice';
+    return say;
+}
+sayAlice()();// logs "Hello Alice"
 
 ### In which lifecycle event do you make AJAX requests and why?
 
