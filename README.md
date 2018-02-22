@@ -42,6 +42,8 @@ Redux is a JavaScript library used to predictably manage an application’s stat
 
 ### Talk to me about Error Boundaries
 
+Error boundaries are a feature of React 16. They are React components that catch JavaScript errors anywhere in their child component tree, log those errors and display a fallback UI instead of the crashed component tree. Think of them as try-catch statements, but for React. 
+
 ### What is Reselect?
 
 ### What is a Closure in JavaScript?
@@ -63,6 +65,12 @@ sayAlice()();// logs "Hello Alice"
 componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
 
 ### What does shouldComponentUpdate do and why is it important?
+
+shouldComponentUpdate is a lifecycle method that allows us to opt out of the reconciliation process for the component we use it in. It allows the developer to have fine motor control over which situations the UI should or shouldn't update. 
+
+### Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
+
+React.Children.map takes into account that props.children may be an array or an object where as props.children.map assumes that there are multiple children (an array of objects). 
 
 ### When would you use a class component over a functional component? 
 
