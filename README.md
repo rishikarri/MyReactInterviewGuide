@@ -60,6 +60,53 @@ function sayAlice() {
 }
 sayAlice()();// logs "Hello Alice"
 
+### What is the difference between createElement and cloneElement?
+
+### What is the difference between deep and shallow merge of JavaScript objects?
+
+In a shallow merge of objects, if the original object and the merged object have the same key, the value will get overwritten by the "merged object", 
+
+in a deep merge, the key will now have both its orginal value and any additional value provided by the merged object. 
+
+As an example: 
+
+let obj1 = {
+	tennis: {
+		tennisCourt: 'frankie allen park', 
+	}
+	basketball: {
+		basketballCourt: 'LA Fitness', 
+	}
+}
+
+let obj 2 = {
+	tennis: {
+		tennisCourt: 'piedmont park'
+	}
+}
+
+const shallowMergedObject = {
+	tennis: {
+		tennisCourt: 'piedmont park'
+	}
+	basketball: {
+		basketballCourt: 'LA Fitness', 
+	}
+}
+
+const deepMergedObject = {
+	tennis: {
+		tennisCourt: 'frankie allen park', 
+		tennisCourt: 'piedmont park'
+	}
+	basketball: {
+		basketballCourt: 'LA Fitness', 
+	}
+}
+
+
+
+
 ### In which lifecycle event do you make AJAX requests and why?
 
 componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
