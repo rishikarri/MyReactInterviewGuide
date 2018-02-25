@@ -16,7 +16,10 @@ setState is used to update the local state of a component. When you call setStat
 a new tree of React elements (which you can think of as an object representation of your UI). Once it has this tree in place, React will 
 diff this new tree against the previous element tree. By doing this, React will then know the exact changes which occur and by knowing exactly what changes occured, will be able to update the UI only where necessary. 
 
+### What are synthetic events in React?
 
+Instances of SyntheticEvent are a cross-browser wrapper around the browser's native event. They combine the behavior of different 
+browsers into one API. This is done to make sure that the events show consistent properties across different browsers. 
 
 ### What is the difference between a controlled component and an uncontrolled component?
 
@@ -60,7 +63,13 @@ function sayAlice() {
 }
 sayAlice()();// logs "Hello Alice"
 
-### What is the difference between createElement and cloneElement?
+### What React.cloneElement?
+
+You can use this to clone and return a new React Element with all of the original props plus any additional props you would like to add. 
+
+### What React.createElement?
+
+You typically won't be using this function if you are writing React with JSX. React.createElement creates and returns a new React Element of a given type (tag name string such as 'div' or 'span'). 
 
 ### What is the difference between deep and shallow merge of JavaScript objects?
 
@@ -105,11 +114,19 @@ const deepMergedObject = {
 }
 
 
+### What is a Higher-Order-Component?
+
+A higher order component is a function that takes a component as an input and returns an enhanced component as an output. 
+
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+
+The most common example I can think of is the connect example in the Redux library that "connects" a React Component to the Redux store
 
 
 ### In which lifecycle event do you make AJAX requests and why?
 
 componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
+
 
 ### What does shouldComponentUpdate do and why is it important?
 
@@ -127,6 +144,14 @@ If your component has state or a lifecycle method, use a class component. Otherw
 
 Refs are an escape hatch which allow you to get direct access to a DOM element. In order to use them you attach a ref attribute to your 
 component whose value is a callback function which recieves the underlying DOM element as its first argument. 
+
+### What is two way data binding in an MVC cdoebase? 
+
+Two way data binding means that when properties in the model get updated, so does the UI. 
+
+Similarly, when properties in the UI get updated, so does the model. 
+
+You cannot update one piece of data without the other. The data sets are "bound"
 
 ### What is a callback? 
 
