@@ -113,6 +113,21 @@ const deepMergedObject = {
 	}
 }
 
+### What is Recursion?
+
+A recursive function is one that calls itself. It is an alternative way to solving a problem which requires iterating. 
+
+A recursive function has two cases: A base case and a recursive case. The base case is when the function stops calling itself and the recursive case is when the function calls itself again. 
+
+The best example is a solution I wrote to generating x! when given x: 
+
+const factorial = (x) => {
+    if (x === 1) {
+        return 1; 
+    } else {
+        return x * factorial(x-1)
+    }
+}
 
 ### What is a Higher-Order-Component?
 
@@ -152,6 +167,20 @@ Two way data binding means that when properties in the model get updated, so doe
 Similarly, when properties in the UI get updated, so does the model. 
 
 You cannot update one piece of data without the other. The data sets are "bound"
+
+### Explain MVC. 
+
+MVC, or Model View Controller is an architectual pattern commonly used for creating User Interfaces. The pattern divides an application into three interconnected parts. Doing so allows a separation between how information is presented to the user and how information is internally represented. 
+
+The model directly manages data, logic and rules of the application. 
+
+The view is what the user sees. 
+
+The controller is what accepts input and provides instructions to the model to update itself which will then trigger the view to update accordingly. 
+
+### Explain Big O Notation? 
+
+Big O notation is used in 
 
 ### What is a callback? 
 
