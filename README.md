@@ -1,4 +1,4 @@
-# Software Dev Interview Questions with a focus on React
+# My Software Developer Interview Guide
 
 ### What is React? 
 
@@ -180,7 +180,7 @@ The controller is what accepts input and provides instructions to the model to u
 
 ### Explain Big O Notation? 
 
-Big O notation is used in computer science to describe the performance or complxity of an algorithm. Big O specifically describes the worst-case scenario and can be used to describe the execution time requred or the spaced used by an algorithm. 
+Big O notation is used in computer science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario and can be used to describe the execution time requred or the spaced used by an algorithm. 
 
 O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data size. 
 
@@ -197,9 +197,44 @@ O (logN) - doubling the size of the input data set has little effect on the algo
 A callback function, also known as a Higher Order Function, is a function passed to another function as a parameter. By doing this you can 
 execute the function passed as the parameter (the callback function) at a later time.
 
+## SQL 
+
+What is SQL? 
+
+SQL stands for Structured Query Language. It is the standard language for storing, manipulating and retrieving data from databases. 
+
+## What are RDBMS? 
+
+Relational Database Management Systems are programs that let you create and update a relational database. Examples are as follows: 
+
+- Oracle
+- MySQL
+- SQLite
+- Microsoft Acces
+- FoxPro
+
+The data in RDMBS is stored in database tables. 
+
+A table is a collection of related data entries and consists of columns and rows. 
+
+A field is a column in a table that is designed to maintain specific information about every record (row) in the table. 
+
+A record or row, is each individual entry that exists in the table. 
+
+
+## What is a SQL Join? 
+
+A join clause is used to combine rows from two or more tables based on a related column between them. 
+
+Inner Join - Returns records that have matching values in bot h tables. 
+
+Left Join - Returns all records from the left table and matched records from the right table
+
+Right Join - Returns all records from teh right table and matched records from the left table. 
+
+Full Join - returns all records when there is a match in either the right or left table. 
+
 ### Other good information to know
-
-
 
 React Fiber is the next implementation of React's reconciliation algorithm. 
 
