@@ -1,5 +1,7 @@
 # My Software Developer Interview Guide
 
+## React & Redux
+
 ### What is React? 
 
 It is a JavaScript library for building User Interfaces. It follows the component based approach which helps in building reusable UI components. It was built by Facebook. 
@@ -39,15 +41,69 @@ Material-UI Text-Field or any other input field.
 
 Typically should use controlled components as they support instant field validation, allow you to disable / enable buttons and enforce input formats
 
+### What is React Fiber? 
+
+React Fiber is the next implementation of React's reconciliation algorithm. 
+
 ### What is Redux?
 
 Redux is a JavaScript library used to predictably manage an application’s state. 
+
+
+### What is a Higher-Order-Component?
+
+A higher order component is a function that takes a component as an input and returns an enhanced component as an output. 
+
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+
+The most common example I can think of is the connect example in the Redux library that "connects" a React Component to the Redux store
+
+
+### In which lifecycle event do you make AJAX requests and why?
+
+componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
+
+
+### What does shouldComponentUpdate do and why is it important?
+
+shouldComponentUpdate is a lifecycle method that allows us to opt out of the reconciliation process for the component we use it in. It allows the developer to have fine motor control over which situations the UI should or shouldn't update. 
+
+### Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
+
+React.Children.map takes into account that props.children may be an array or an object where as props.children.map assumes that there are multiple children (an array of objects). 
+
+### When would you use a class component over a functional component? 
+
+If your component has state or a lifecycle method, use a class component. Otherwise, use a functional component. 
+
+### What are refs in react? 
+
+Refs are an escape hatch which allow you to get direct access to a DOM element. In order to use them you attach a ref attribute to your 
+component whose value is a callback function which recieves the underlying DOM element as its first argument. 
+
+### What is two way data binding in an MVC cdoebase? 
+
+Two way data binding means that when properties in the model get updated, so does the UI. 
+
+Similarly, when properties in the UI get updated, so does the model. 
+
+You cannot update one piece of data without the other. The data sets are "bound"
 
 ### Talk to me about Error Boundaries
 
 Error boundaries are a feature of React 16. They are React components that catch JavaScript errors anywhere in their child component tree, log those errors and display a fallback UI instead of the crashed component tree. Think of them as try-catch statements, but for React. 
 
 ### What is Reselect?
+
+### What React.cloneElement?
+
+You can use this to clone and return a new React Element with all of the original props plus any additional props you would like to add. 
+
+### What React.createElement?
+
+You typically won't be using this function if you are writing React with JSX. React.createElement creates and returns a new React Element of a given type (tag name string such as 'div' or 'span'). 
+
+## General
 
 ### What is a Closure in JavaScript?
 
@@ -63,13 +119,7 @@ function sayAlice() {
 }
 sayAlice()();// logs "Hello Alice"
 
-### What React.cloneElement?
 
-You can use this to clone and return a new React Element with all of the original props plus any additional props you would like to add. 
-
-### What React.createElement?
-
-You typically won't be using this function if you are writing React with JSX. React.createElement creates and returns a new React Element of a given type (tag name string such as 'div' or 'span'). 
 
 ### What is the difference between deep and shallow merge of JavaScript objects?
 
@@ -113,61 +163,6 @@ const deepMergedObject = {
 	}
 }
 
-### What is Recursion?
-
-A recursive function is one that calls itself. It is an alternative way to solving a problem which requires iterating. 
-
-A recursive function has two cases: A base case and a recursive case. The base case is when the function stops calling itself and the recursive case is when the function calls itself again. 
-
-The best example is a solution I wrote to generating x! when given x: 
-
-const factorial = (x) => {
-    if (x === 1) {
-        return 1; 
-    } else {
-        return x * factorial(x-1)
-    }
-}
-
-### What is a Higher-Order-Component?
-
-A higher order component is a function that takes a component as an input and returns an enhanced component as an output. 
-
-const EnhancedComponent = higherOrderComponent(WrappedComponent);
-
-The most common example I can think of is the connect example in the Redux library that "connects" a React Component to the Redux store
-
-
-### In which lifecycle event do you make AJAX requests and why?
-
-componentDidMount - by doing this, you can guarantee that there is actually a component to update. Additionally, this will only run one time as opposed to other lifecycle hooks which could trigger an infinite re-render and break your app. 
-
-
-### What does shouldComponentUpdate do and why is it important?
-
-shouldComponentUpdate is a lifecycle method that allows us to opt out of the reconciliation process for the component we use it in. It allows the developer to have fine motor control over which situations the UI should or shouldn't update. 
-
-### Why would you use React.Children.map(props.children, () => ) instead of props.children.map(() => )
-
-React.Children.map takes into account that props.children may be an array or an object where as props.children.map assumes that there are multiple children (an array of objects). 
-
-### When would you use a class component over a functional component? 
-
-If your component has state or a lifecycle method, use a class component. Otherwise, use a functional component. 
-
-### What are refs in react? 
-
-Refs are an escape hatch which allow you to get direct access to a DOM element. In order to use them you attach a ref attribute to your 
-component whose value is a callback function which recieves the underlying DOM element as its first argument. 
-
-### What is two way data binding in an MVC cdoebase? 
-
-Two way data binding means that when properties in the model get updated, so does the UI. 
-
-Similarly, when properties in the UI get updated, so does the model. 
-
-You cannot update one piece of data without the other. The data sets are "bound"
-
 ### Explain MVC. 
 
 MVC, or Model View Controller is an architectual pattern commonly used for creating User Interfaces. The pattern divides an application into three interconnected parts. Doing so allows a separation between how information is presented to the user and how information is internally represented. 
@@ -183,9 +178,11 @@ The controller is what accepts input and provides instructions to the model to u
 A callback function, also known as a Higher Order Function, is a function passed to another function as a parameter. By doing this you can 
 execute the function passed as the parameter (the callback function) at a later time.
 
+
+
 ## SQL 
 
-What is SQL? 
+### What is SQL? 
 
 SQL stands for Structured Query Language. It is the standard language for storing, manipulating and retrieving data from databases. 
 
@@ -226,12 +223,9 @@ Full Join - returns all records when there is a match in either the right or lef
 GROUP BY statement is used with aggregate functions to "group" the result-set by one or more columns 
 
 
-
 ## Computer Science Questions / Other
 
-React Fiber is the next implementation of React's reconciliation algorithm. 
-
-### Explain Big O Notation? 
+### Explain Big O Notation.
 
 Big O notation is used in computer science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario and can be used to describe the execution time requred or the spaced used by an algorithm. 
 
@@ -251,11 +245,44 @@ A character set is a defined list of characters that is recognized by computer h
 
 ### What is a literal? 
 
-A literal is a data value that appears directly in a program? 
+A literal is a data value that appears directly in a program
 
 1.2 is a float / literal
 
+### What is the difference between Machine Code and Source Code? 
+
+Machine code is what the computer actually processes (think 0s and 1s) 
+
+Source Code is what the human writes. 
+
+Source code is compiled or interpreted into machine code before it can be run / executed. 
 
 
+### What is the difference between an Interpreter and a Compiler? 
+
+Compiled languages are written in code that can be executed directly by the computer's processor. All of the compiling is done "up front". For example, if I am writing a program in C, Erlang or Pascal (a few examples of compiled languages), I will need to run my source code through a compiler before it is ready to execute. The compiler will optimize source code, create intermediary object code (code produced by a compiler), link the object code to a linker (load libraries unique to the operating system) and create a .exe file. This file is ready to be executed and can be run immediately. 
+
+An interpereted language is any programming language that isn't already "machine code" prior to runtime. Translation does not happen before the code is executed. It happens at the same time. As a code is being executed, if the languages instructions need to be translated to machine code, the interpreter jumps in and translates the code on the spot. 
+
+The interpreter converts the source code into machine code each time you run the program, one line at a time. 
+
+JavaScript is an interpereted language. 
+
+
+### What is Recursion?
+
+A recursive function is one that calls itself. It is an alternative way to solving a problem which requires iterating. 
+
+A recursive function has two cases: A base case and a recursive case. The base case is when the function stops calling itself and the recursive case is when the function calls itself again. 
+
+The best example is a solution I wrote to generating x! when given x: 
+
+const factorial = (x) => {
+    if (x === 1) {
+        return 1; 
+    } else {
+        return x * factorial(x-1)
+    }
+}
 
 
