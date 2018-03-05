@@ -178,20 +178,6 @@ The view is what the user sees.
 
 The controller is what accepts input and provides instructions to the model to update itself which will then trigger the view to update accordingly. 
 
-### Explain Big O Notation? 
-
-Big O notation is used in computer science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario and can be used to describe the execution time requred or the spaced used by an algorithm. 
-
-O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data size. 
-
-O(N) describes an algorithm where performance will grow linearly and in direct proportion to the size of the input data set. 
-
-O(N^2) performance is directly proprotional ot the square size of the input data set. This is common with algorithms that involve nested iterations over the data set. Think: nested for loop. 
-
-O(2^N) describes an algorithm whose worst case runtime doubles with each addition to the input data set. THe growth cure of an O^2N function is exponential. Think recursive calculation of the Fibonnaci sequence. 
-
-O (logN) - doubling the size of the input data set has little effect on the algorithm's growth as the data set will be halved by each iteration. Think: searching through a phone book. 
-
 ### What is a callback? 
 
 A callback function, also known as a Higher Order Function, is a function passed to another function as a parameter. By doing this you can 
@@ -203,7 +189,7 @@ What is SQL?
 
 SQL stands for Structured Query Language. It is the standard language for storing, manipulating and retrieving data from databases. 
 
-## What are RDBMS? 
+### What are RDBMS? 
 
 Relational Database Management Systems are programs that let you create and update a relational database. Examples are as follows: 
 
@@ -222,7 +208,7 @@ A field is a column in a table that is designed to maintain specific information
 A record or row, is each individual entry that exists in the table. 
 
 
-## What is a SQL Join? 
+### What is a SQL Join? 
 
 A join clause is used to combine rows from two or more tables based on a related column between them. 
 
@@ -234,9 +220,42 @@ Right Join - Returns all records from teh right table and matched records from t
 
 Full Join - returns all records when there is a match in either the right or left table. 
 
-### Other good information to know
+
+### GROUP BY 
+
+GROUP BY statement is used with aggregate functions to "group" the result-set by one or more columns 
+
+
+
+## Computer Science Questions / Other
 
 React Fiber is the next implementation of React's reconciliation algorithm. 
+
+### Explain Big O Notation? 
+
+Big O notation is used in computer science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario and can be used to describe the execution time requred or the spaced used by an algorithm. 
+
+O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data size. 
+
+O(N) describes an algorithm where performance will grow linearly and in direct proportion to the size of the input data set. 
+
+O(N^2) performance is directly proprotional ot the square size of the input data set. This is common with algorithms that involve nested iterations over the data set. Think: nested for loop. 
+
+O(2^N) describes an algorithm whose worst case runtime doubles with each addition to the input data set. THe growth cure of an O^2N function is exponential. Think recursive calculation of the Fibonnaci sequence. 
+
+O (logN) - doubling the size of the input data set has little effect on the algorithm's growth as the data set will be halved by each iteration. Think: searching through a phone book. 
+
+### What is a character set?
+
+A character set is a defined list of characters that is recognized by computer hardware and software. Each character is represented by a number. The ASCII character set for example, uses the numbers 0 - 127 to represent all english characters plus a few other special characters. For Example, A = 65
+
+### What is a literal? 
+
+A literal is a data value that appears directly in a program? 
+
+1.2 is a float / literal
+
+
 
 
 
