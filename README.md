@@ -180,7 +180,17 @@ The controller is what accepts input and provides instructions to the model to u
 
 ### Explain Big O Notation? 
 
-Big O notation is used in 
+Big O notation is used in computer science to describe the performance or complxity of an algorithm. Big O specifically describes the worst-case scenario and can be used to describe the execution time requred or the spaced used by an algorithm. 
+
+O(1) describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data size. 
+
+O(N) describes an algorithm where performance will grow linearly and in direct proportion to the size of the input data set. 
+
+O(N^2) performance is directly proprotional ot the square size of the input data set. This is common with algorithms that involve nested iterations over the data set. Think: nested for loop. 
+
+O(2^N) describes an algorithm whose worst case runtime doubles with each addition to the input data set. THe growth cure of an O^2N function is exponential. Think recursive calculation of the Fibonnaci sequence. 
+
+O (logN) - doubling the size of the input data set has little effect on the algorithm's growth as the data set will be halved by each iteration. Think: searching through a phone book. 
 
 ### What is a callback? 
 
