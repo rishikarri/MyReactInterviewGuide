@@ -120,6 +120,8 @@ function sayAlice() {
 sayAlice()();// logs "Hello Alice"
 
 
+### Explain the "this" keyword?
+
 
 ### What is the difference between deep and shallow merge of JavaScript objects?
 
