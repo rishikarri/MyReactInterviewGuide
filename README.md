@@ -131,6 +131,16 @@ XML stands for extensible markup language. XML is a markup langugage much like H
 
 The difference between HTML and XML: XML is designed to carry data with a focus on what the data is while HTML is designed to display data with a focus on how the data looks. XML tags are not predefined while HTML tags are. XML stores data in plain text format which provides a software / hardware independent way of storing, transporting and sharing data. 
 
+### What is the difference between a while loop and a do-while loop? 
+
+The code inside a while loop executes after the condition is met. 
+
+THe code inside the do while executes and then the condition is tested.
+
+This means that a do while loop will always execute at least one time whereas a while loop may never execute. 
+
+
+
 ### Explain the "this" keyword?
 
 
