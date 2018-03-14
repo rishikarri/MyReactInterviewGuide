@@ -119,6 +119,17 @@ function sayAlice() {
 }
 sayAlice()();// logs "Hello Alice"
 
+### What is a Closure in JavaScript?
+
+### What is a markup language
+
+A markup language is a language in which the user annotates text so that the computer can manipulate the text. Markup becomes a language when rules are codified around how to write and use that markup. Examples are XML and HTML. 
+
+### Tell me about XML
+
+XML stands for extensible markup language. XML is a markup langugage much like HTML. XML was designed to store and transport data and is self-descriptive. 
+
+The difference between HTML and XML: XML is designed to carry data with a focus on what the data is while HTML is designed to display data with a focus on how the data looks. XML tags are not predefined while HTML tags are. XML stores data in plain text format which provides a software / hardware independent way of storing, transporting and sharing data. 
 
 ### Explain the "this" keyword?
 
