@@ -105,6 +105,8 @@ You typically won't be using this function if you are writing React with JSX. Re
 
 ## General
 
+
+
 ### What is a Closure in JavaScript?
 
 An function with preserved data. An inner function with access to a variable or parameter outside of its scope.
@@ -119,7 +121,64 @@ function sayAlice() {
 }
 sayAlice()();// logs "Hello Alice"
 
-### What is a Closure in JavaScript?
+### Tell me about the Bubble Sort method
+
+The bubble sort method operates by looping through an array of values and comparing the ith value to the ith + 1 value. If the ith + 1 is smaller than the ith value, the bubble sort will move onto the next pairing and perform the same logic. 
+
+The bubble sort has a Big O notation of (n^2) and an Omega notation of (n) 
+
+Note that the Omega notation  of (n) assumes that the bubble sort is optimized to break from the inner for-loop if no swaps have been made on the current ith iteration. If this break logic is not implemented, the Omega Notation is also (n^2). 
+
+Please see my implementation in C below: 
+
+```c
+#include <cs50.h>
+#include <stdio.h>
+
+void bubbleSort();
+
+// global array to sort
+
+#define LISTLENGTH 12
+int arrayToSort[LISTLENGTH] = {5, 21, 2992, 12, 13, 15, 19, 1, 3, 2, 6, 9 };
+// int arrayToSort[12] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 10, 12 };
+
+int main() {
+    // call bubble sort function
+    bubbleSort();
+
+    // print results
+    printf("%s", "[");
+    for (int i=0; i < LISTLENGTH; i++) {
+      printf("%d%s", arrayToSort[i], ", ");
+    }
+    printf("%s", "]");
+}
+
+void bubbleSort() {
+    bool swapped = false;
+    int swap, i, j;
+
+    for (i=0; i < LISTLENGTH; i++) {
+        swapped = false;
+        for (j = 0; j < LISTLENGTH - i; j++) {
+            if (arrayToSort[j] > arrayToSort[j+1]) {
+                swap = arrayToSort[j];
+                arrayToSort[j] = arrayToSort[j + 1];
+                arrayToSort[j+1] = swap;
+                swapped = true;
+            }
+        }
+        if (!swapped) {
+            printf("%s", "I, the computer, did not make any swaps this pass -  iteration: ");
+            printf("%d", i + 1);
+            printf("\n");
+            break;
+        }
+    }
+}
+
+```
 
 ### What is a markup language
 
