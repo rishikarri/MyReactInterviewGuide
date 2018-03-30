@@ -246,6 +246,13 @@ Full Join - returns all records when there is a match in either the right or lef
 
 GROUP BY statement is used with aggregate functions to "group" the result-set by one or more columns 
 
+## Data Structures
+
+### What is the difference between Linear and Non Linear Data Structures? 
+
+Linear data structures contain data elements that are ordered sequentially. There is a starting point and an ending point. Each middle element has an element to the left and an element to the right or, in the case of a Linked List, has a pointer pointing to it and is itself pointing to another node. Examples of linear data structures: Linked Lists, Arrays, Queues, Stacks. Memory in a computer is organized linearly so implementing a linear data strucutre is often easier.
+
+Nonlinear data structures contain data elements that can be attached to several other data elements. They do not form a sequence and cannot be traversed in a single run. Examples: Tree, Graph
 
 ## Computer Science Questions / Other
 
