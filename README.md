@@ -248,6 +248,14 @@ GROUP BY statement is used with aggregate functions to "group" the result-set by
 
 ## Data Structures
 
+### What is a Linked List?
+
+### What is an Array? 
+
+### What are the pros and cons of using an Array Data Structure? 
+
+### What are the pros and cons of using a Linked List Data Structure? 
+
 ### What is the difference between Linear and Non Linear Data Structures? 
 
 Linear data structures contain data elements that are ordered sequentially. There is a starting point and an ending point. Each middle element has an element to the left and an element to the right or, in the case of a Linked List, has a pointer pointing to it and is itself pointing to another node. Examples of linear data structures: Linked Lists, Arrays, Queues, Stacks. Memory in a computer is organized linearly so implementing a linear data strucutre is often easier.
