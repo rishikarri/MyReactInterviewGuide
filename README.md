@@ -252,6 +252,9 @@ GROUP BY statement is used with aggregate functions to "group" the result-set by
 
 ### Explain what -> does in C
 
+### Talk to me about Pointers
+
+
 ## Data Structures
 
 ### What is a Linked List?
