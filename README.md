@@ -246,6 +246,12 @@ Full Join - returns all records when there is a match in either the right or lef
 
 GROUP BY statement is used with aggregate functions to "group" the result-set by one or more columns 
 
+## C
+
+### What is a Struct? 
+
+### Explain what -> does in C
+
 ## Data Structures
 
 ### What is a Linked List?
