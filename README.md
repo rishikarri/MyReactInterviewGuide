@@ -254,6 +254,10 @@ GROUP BY statement is used with aggregate functions to "group" the result-set by
 
 ### Talk to me about Pointers
 
+### What is a segmentation fault? 
+
+A segmentation fault occurs when a programmer tries to access memory that he/she is not allowed to. 
+
 
 ## Data Structures
 
